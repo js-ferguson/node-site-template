@@ -25,6 +25,7 @@ module.exports = class Product {
     this.price = price
   }
 
+
   save () {
     this.id = Math.random().toString()
     getProductsFromFile(products => {
@@ -39,6 +40,7 @@ module.exports = class Product {
     getProductsFromFile(cb)
   }
 
+
   static findById (id, cb) {
     getProductsFromFile(products => {
       const product = products.find(p => p.id === id)
@@ -46,3 +48,4 @@ module.exports = class Product {
     })
   }
 }
+
